@@ -27,6 +27,7 @@ const useStyles = makeStyles({
 
 const AddAnnouncement = () => {
   const [announcement, setAnnouncement] = useState(initialValue)
+  const [warningMessage, setWarningMessage] = useState('')
   const { title, description } = announcement
   const classes = useStyles()
   let history = useHistory()
@@ -40,13 +41,18 @@ const AddAnnouncement = () => {
   }
 
   const addAnnouncementDetails = async () => {
-    await addAnnouncement(announcement)
-    history.push('/')
+    if (title === '' || description === '') {
+      setWarningMessage('Please input fields')
+    } else {
+      await addAnnouncement(announcement)
+      history.push('/')
+    }
   }
 
   return (
     <FormGroup className={classes.container}>
       <Typography variant='h4'>Add Announcement</Typography>
+      {warningMessage && <h3>{warningMessage}</h3>}
       <FormControl>
         <InputLabel htmlFor='my-input'>Title</InputLabel>
         <Input

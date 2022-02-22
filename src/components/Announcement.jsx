@@ -43,6 +43,7 @@ const Announcement = () => {
   const [addComment, setAddComment] = useState(initialValue)
   const { commentText } = addComment
   const [similarAnnouncements, setSimilarAnnouncements] = useState([])
+  const [warningMessage, setWarningMessage] = useState('')
   const { id } = useParams()
   //const navigate = useNavigate()
   const classes = useStyles()
@@ -58,10 +59,14 @@ const Announcement = () => {
   }
 
   const addCommentDetails = async () => {
-    await addComments(addComment)
-    // window.location.reload(false)
-    getAllComments()
-    history.push(`/announcements/${id}`)
+    if (commentText === '') {
+      setWarningMessage('Please input fields')
+    } else {
+      await addComments(addComment)
+      // window.location.reload(false)
+      getAllComments()
+      history.push(`/announcements/${id}`)
+    }
     //navigate('/')
   }
 
@@ -225,6 +230,7 @@ const Announcement = () => {
           </Button>
         </FormControl>
       </FormGroup>
+      {warningMessage && <h3>{warningMessage}</h3>}
       Comments length - {comments.length}
       {comments.map((item) => (
         <>
