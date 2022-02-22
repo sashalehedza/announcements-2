@@ -1,7 +1,12 @@
 // import React, { useState, useEffect, useCallback } from 'react'
 import React, { useState, useEffect, useCallback } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getAnnouncements, getComments, addComments } from '../service/api'
+import {
+  getAnnouncements,
+  getComments,
+  addComments,
+  deleteComment,
+} from '../service/api'
 //import { useNavigate } from 'react-router-dom'
 import {
   FormGroup,
@@ -86,6 +91,11 @@ const Announcement = () => {
   useEffect(() => {
     getSimilarAnnouncements()
   }, [])
+
+  const deleteCommentData = async (id) => {
+    await deleteComment(id)
+    getAllComments()
+  }
 
   let getCreatedTime = (announcement) => {
     var showDate = new Date(announcement.created)
@@ -219,7 +229,16 @@ const Announcement = () => {
       </FormGroup>
       {comments.length}
       {comments.map((item) => (
-        <h3>{item.commentText}</h3>
+        <>
+          <h3>{item.commentText}</h3>
+          <Button
+            color='secondary'
+            variant='contained'
+            onClick={() => deleteCommentData(item.id)}
+          >
+            Delete
+          </Button>
+        </>
       ))}
 
       {simAnnLength > 0 && (

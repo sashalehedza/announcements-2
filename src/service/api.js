@@ -29,6 +29,10 @@ export const deleteAnnouncement = async (id) => {
   return await axios.delete(`${announcementsUrl}/${id}`)
 }
 
+export const deleteComment = async (id) => {
+  return await axios.delete(`${commentsUrl}/${id}`)
+}
+
 export const editAnnouncement = async (id, announcement) => {
   return await axios.put(`${announcementsUrl}/${id}`, announcement)
 }
