@@ -45,6 +45,7 @@ const AddAnnouncement = () => {
       setWarningMessage('Please input fields')
     } else {
       await addAnnouncement(announcement)
+      setWarningMessage('')
       history.push('/')
     }
   }

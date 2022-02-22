@@ -64,6 +64,7 @@ const Announcement = () => {
     } else {
       await addComments(addComment)
       // window.location.reload(false)
+      setWarningMessage('')
       getAllComments()
       history.push(`/announcements/${id}`)
     }
