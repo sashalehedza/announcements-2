@@ -186,7 +186,6 @@ const Announcement = () => {
           <li> updated: {getUpdatedTime(announcement)}</li>
         )}
       </ul>
-
       {/* <div>
         <h2>Similar Announcements (Length - {simAnnLength})</h2>
         {filteredData.slice(0, maxSize).map((simannouncement) => (
@@ -204,7 +203,6 @@ const Announcement = () => {
           </ul>
         ))}
       </div> */}
-
       <FormGroup className={classes.container}>
         <Typography variant='h4'>Add Comment</Typography>
         <FormControl>
@@ -223,11 +221,11 @@ const Announcement = () => {
             color='primary'
             onClick={() => addCommentDetails()}
           >
-            Add Announcement
+            Add Comment
           </Button>
         </FormControl>
       </FormGroup>
-      {comments.length}
+      Comments length - {comments.length}
       {comments.map((item) => (
         <>
           <h3>{item.commentText}</h3>
@@ -240,7 +238,6 @@ const Announcement = () => {
           </Button>
         </>
       ))}
-
       {simAnnLength > 0 && (
         <h2>Similar Announcements (Length - {simAnnLength})</h2>
       )}
