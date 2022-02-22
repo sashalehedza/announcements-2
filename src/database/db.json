@@ -1,0 +1,92 @@
+{
+  "announcements": [
+    {
+      "title": "t2 t3)",
+      "description": "d2",
+      "created": "2021-11-28T11:09:00.148Z",
+      "id": 1,
+      "updated": "2021-12-23T05:38:08.771Z"
+    },
+    {
+      "title": "test",
+      "description": "testsfafasfas",
+      "created": "2021-12-23T05:42:21.376Z",
+      "id": 2,
+      "updated": "2022-02-22T12:34:00.218Z"
+    },
+    {
+      "title": "sad",
+      "description": "sad",
+      "created": "2022-01-12T13:03:27.870Z",
+      "id": 3
+    },
+    {
+      "title": "asddsa",
+      "description": "sadsaads",
+      "created": "2022-02-22T14:30:08.186Z",
+      "id": 4
+    },
+    {
+      "title": "fasafs",
+      "description": "afafsafsasf",
+      "created": "2022-02-22T14:35:53.623Z",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "commentText": "asfd",
+      "created": "2022-02-22T13:59:31.627Z",
+      "announcementId": "1",
+      "id": "77"
+    },
+    {
+      "commentText": "adads",
+      "created": "2022-02-22T14:14:17.780Z",
+      "announcementId": "1",
+      "id": "P6Eif77"
+    },
+    {
+      "commentText": "adsadsads",
+      "created": "2022-02-22T14:29:48.878Z",
+      "announcementId": "1",
+      "id": "Jye4L0Z"
+    },
+    {
+      "commentText": "asdasddsa",
+      "created": "2022-02-22T14:29:56.077Z",
+      "announcementId": "2",
+      "id": "zcs0N6b"
+    },
+    {
+      "commentText": "dasadsasasd",
+      "created": "2022-02-22T14:30:02.142Z",
+      "announcementId": "3",
+      "id": "dqQlNTQ"
+    },
+    {
+      "commentText": "dasdsas",
+      "created": "2022-02-22T14:30:13.065Z",
+      "announcementId": "4",
+      "id": "xEJwZP0"
+    },
+    {
+      "commentText": "fas",
+      "created": "2022-02-22T14:35:57.788Z",
+      "announcementId": "5",
+      "id": "vuHRMdO"
+    },
+    {
+      "commentText": "fasafsasf",
+      "created": "2022-02-22T14:36:00.406Z",
+      "announcementId": "5",
+      "id": "7nlgY4D"
+    },
+    {
+      "commentText": "явм",
+      "created": "2022-02-22T14:43:36.252Z",
+      "announcementId": "4",
+      "id": "rPcG0bG"
+    }
+  ]
+}
